@@ -1,8 +1,7 @@
 /* booking form */
-
 :root {
-    --primary: #814E2B; /* Warna primer dari tema */
-    --primary-focus: #734424; /* Warna fokus */
+    --primary: #814E2B;
+    --primary-focus: #734424;
 }
 
 /* Fonts */
@@ -16,13 +15,13 @@
 
 /* Body */
 body {
-    background-color: #f8f9fa; /* Warna latar belakang yang lembut */
-    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
-    height: 100vh; /* Pastikan body dan html mengisi tinggi penuh */
-    margin: 0; /* Menghilangkan margin default */
-    display: flex; /* Menambahkan flexbox untuk body */
-    justify-content: center; /* Memusatkan secara horizontal */
-    align-items: center; /* Memusatkan secara vertikal */
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Form Container Adjustment */
@@ -31,7 +30,7 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 100%; /* Lebar 100% */
-    max-width: 400px; /* Lebar maksimum form */
+    max-width: 500px; /* Lebar maksimum form */
     background-color: rgba(255, 255, 255, 0.9); /* Latar belakang form */
     padding: 30px 40px; /* Padding di dalam form */
     border-radius: 10px; /* Sudut membulat */
@@ -39,11 +38,12 @@ body {
     margin: 0 auto;
 }
 
+
 /* Title */
 h1 {
-    color: var(--primary); /* Warna judul */
-    text-align: center; /* Memusatkan judul */
-    margin-bottom: 20px; /* Jarak bawah judul */
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Input Fields */
@@ -60,28 +60,36 @@ h1 {
     color: #593B1F;
 }
 
-.input-box input {
+.input-box input,
+.input-box select {
     width: 100%;
-    padding: 10px 10px 10px 40px; 
+    padding: 10px 10px 10px 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.input-box label {
+    margin-bottom: 5px;
+    font-weight: 500;
 }
 
 /* Submit Button */
 .submit-btn {
     width: 100%;
     padding: 10px;
-    background-color: var(--primary); /* Tombol warna primer */
-    color: white; /* Warna teks tombol */
-    border: none; /* Menghilangkan border */
-    border-radius: 4px; /* Sudut tombol */
-    cursor: pointer; /* Menunjukkan tombol dapat diklik */
-    margin-top: 10px; /* Jarak atas tombol */
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: var(--primary-focus); /* Warna tombol saat hover */
+    background-color: #593B1F;
 }
+
 
 /* Validation Styles */
 .is-invalid {
