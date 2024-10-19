@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($db->query($sql) === TRUE) {
         echo "Register berhasil!";
-        header("Location: login.php"); // Redirect ke halaman login
+        header("Location: LamanBaru.php"); // Redirect ke halaman login
     } else {
         echo "Error: " . $sql . "<br>" . $db->error;
     }

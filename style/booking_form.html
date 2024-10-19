@@ -42,6 +42,18 @@
           onsubmit="return validateInput();"
         >
           <div class="input-box">
+            <i class="bx bx-store"></i>
+            <input
+              type="text"
+              id="coffee-shop-name"
+              name="coffee_shop_name"
+              class="form-control"
+              placeholder="Nama Coffee Shop"
+              readonly
+            />
+          </div>
+
+          <div class="input-box">
             <i class="bx bx-user"></i>
             <input
               type="text"
@@ -145,6 +157,20 @@
     </div>
 
     <script>
+      // Fungsi untuk mengambil parameter dari URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Setel nama coffee shop ketika halaman dimuat
+      document.addEventListener("DOMContentLoaded", function () {
+        const coffeeShopName = getQueryParam("nama");
+        if (coffeeShopName) {
+          document.getElementById("coffee-shop-name").value = coffeeShopName;
+        }
+      });
+
       function validateInput() {
         const emailOrPhone = document.getElementById("contact").value;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

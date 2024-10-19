@@ -120,7 +120,7 @@
 }
 
 /* Submit button */
-.submit-btn {
+.button-link {
   width: 100%;
   padding: 10px;
   background-color: #814e2b;
@@ -131,7 +131,7 @@
   margin-top: 10px;
 }
 
-.submit-btn:hover {
+.button-link:hover {
   background-color: #593b1f;
 }
 

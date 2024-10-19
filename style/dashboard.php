@@ -63,7 +63,7 @@
               >Home</a
             >
             <a class="nav-link" href="CoffeeShop.html">CoffeeShop</a>
-            <a class="nav-link" href="#">Booking</a>
+            <a class="nav-link" href="../style/booking_form.html">Booking</a>
             
             <!-- Dropdown Filter -->
             <div class="nav-item dropdown">
@@ -77,9 +77,10 @@
                     <li><a class="dropdown-item" href="#">Menu</a></li>
                     <li><a class="dropdown-item" href="#">Daftar Favorite</a></li>
                   </ul>
-                 </div>
+            </div>
 
             <a class="nav-link" href="#loginFormWrapper">Login</a>
+            <a class="nav-link" href="../style/search.html">Search</a>
             
           </div>
         </div>
@@ -109,7 +110,7 @@
         </div>
         <div class="col-6">
           <img
-            src="../asset/img/landingPagePng.png"
+            src="../asset/img/landingPagePng-removebg-preview.png"
             alt="Coffee shop"
             width="500px"
           />
@@ -149,7 +150,8 @@
               <a href="#" class="forgot-password">Forgot password?</a>
             </div>
 
-            <button class="submit-btn">Login</button>
+            <button class="submit-btn" onclick="window.location.href='../style/LamanBaru.php';">Login</button>
+
             <div class="register-link">
               <p>
                 Don't have an account?
@@ -165,6 +167,26 @@
         </form>
       </div>
     </div>
+
+<!-- Forgot Password Form Wrapper -->
+<div id="forgotPasswordFormWrapper" class="overlay">
+    <div class="form-container">
+        <!-- Forgot Password Form -->
+        <div id="forgotPassword" class="form-box">
+            <h1>Lupa Password</h1>
+            <p>Masukkan email Anda untuk mengirimkan tautan reset password.</p>
+            <div class="input-box">
+                <input type="email" id="forgotPasswordEmail" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <button class="submit-btn" id="sendResetLinkBtn">Kirim Tautan Reset Password</button>
+            <div class="close-link">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- Register Form Wrapper -->
     <div id="registerFormWrapper" class="overlay">
@@ -198,7 +220,7 @@
             <i class="bx bxs-lock-alt"></i>
           </div>
 
-          <button class="submit-btn" name= "register">Register</button>
+          <button class="submit-btn">Register</button>
           <div class="register-link">
             <p>
               Already have an account?
@@ -214,5 +236,42 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript for Remember Me and Forgot Password -->
+    <script>
+        // Check if the Remember Me checkbox is checked and save to localStorage
+        document.getElementById('rememberMe').onclick = function() {
+            if (this.checked) {
+                localStorage.setItem('rememberMe', 'true');
+            } else {
+                localStorage.removeItem('rememberMe');
+            }
+        };
+
+        // Handle showing the Forgot Password form
+        document.getElementById('forgotPasswordLink').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('loginFormWrapper').style.display = 'none';
+            document.getElementById('forgotPasswordFormWrapper').style.display = 'block';
+        };
+
+        // Handle sending reset password link
+        document.getElementById('sendResetLinkBtn').onclick = function() {
+            const username = document.getElementById('forgotPasswordUsername').value;
+            // Simulate sending the reset link to the registered email
+            alert('Tautan reset password telah dikirim ke email yang terdaftar untuk username: ${username}');
+            // Close the forgot password form
+            document.getElementById('forgotPasswordFormWrapper').style.display = 'none';
+            document.getElementById('loginFormWrapper').style.display = 'block';
+        };
+
+        // Close modal functionality
+        document.querySelectorAll('.close-link a').forEach(link => {
+            link.onclick = function(e) {
+                e.preventDefault();
+                this.closest('.overlay').style.display = 'none';
+            };
+        });
+    </script>
+
   </body>
 </html>

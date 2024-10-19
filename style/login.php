@@ -29,7 +29,7 @@ if (isset($_POST['login'])) {
             $_SESSION['is_Login'] = true;
 
             // Pengalihan ke laman baru
-            header("Location: dashboard.php");
+            header("location: ../style/LamanBaru.php");
             exit(); // Hentikan eksekusi setelah pengalihan
         } else {
             // Jika password salah
