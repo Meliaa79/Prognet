@@ -1,0 +1,93 @@
+:root {
+    --primary: #814E2B;
+    --primary-focus: #734424;
+}
+
+/* fonts */
+.font-poppins {
+    font-family: 'Poppinds', sans-serif !important;
+}
+
+/* navbar */
+.active {
+    color: var(--primary) !important;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* General Form Styling */
+.search-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #d3d3d3;
+    border-radius: 40px;
+    padding: 10px 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 40px;
+}
+
+.search-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #999;
+}
+
+.search-bar button {
+    background-color: #5c4d37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #4e3f2e;
+}
+
+/* Cards Styling */
+.card {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Footer styles */
+footer {
+    background-color: #5c4d37;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
