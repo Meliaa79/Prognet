@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<!-- booking.html -->
+>>>>>>> a9e9b22d4d47ec42ef60bc3c052243a4ada07253
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,18 +22,26 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Custom CSS -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="./style/booking.css">
+=======
+    <link rel="stylesheet" href="./style/booking.css"> <!-- Link ke file CSS -->
+>>>>>>> a9e9b22d4d47ec42ef60bc3c052243a4ada07253
 </head>
 <body>
     <div class="container-fluid">
         <div class="form-container">
             <h1>Form Booking</h1>
+<<<<<<< HEAD
             <form action="submit_booking.php" method="POST" onsubmit="return validateInput();">
                 <div class="input-box">
                     <i class='bx bx-store'></i>
                     <input type="text" id="coffee-shop-name" name="coffee_shop_name" class="form-control" placeholder="Nama Coffee Shop" readonly>
                 </div>
                 
+=======
+            <form action="submit_booking.php" method="POST"> <!-- Sesuaikan action sesuai kebutuhan -->
+>>>>>>> a9e9b22d4d47ec42ef60bc3c052243a4ada07253
                 <div class="input-box">
                     <i class='bx bx-user'></i>
                     <input type="text" id="name" name="name" class="form-control" placeholder="Nama" required>
@@ -37,6 +49,7 @@
 
                 <div class="input-box">
                     <i class='bx bx-envelope'></i>
+<<<<<<< HEAD
                     <input type="text" id="contact" name="contact" class="form-control" placeholder="Email / No.Tlp" required>
                 </div>
 
@@ -81,6 +94,19 @@
                         <option value="tempat">Booking Tempat (1 Coffee Shop)</option>
                         <option value="ruangan">Booking Ruangan (Meja + Kursi)</option>
                     </select>
+=======
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+
+                <div class="input-box">
+                    <i class='bx bx-calendar'></i>
+                    <input type="date" id="date" name="date" class="form-control" required>
+                </div>
+
+                <div class="input-box">
+                    <i class='bx bx-time'></i>
+                    <input type="time" id="time" name="time" class="form-control" required>
+>>>>>>> a9e9b22d4d47ec42ef60bc3c052243a4ada07253
                 </div>
 
                 <button type="submit" class="submit-btn">Confirm Booking</button>
@@ -88,6 +114,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <script>
         // Data jam operasional setiap coffee shop
         const operationalHours = {
@@ -160,6 +187,11 @@
     </script>
 
     <!-- Bootstrap JS -->
+=======
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+>>>>>>> a9e9b22d4d47ec42ef60bc3c052243a4ada07253
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
