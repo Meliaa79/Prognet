@@ -1,0 +1,87 @@
+:root {
+    --primary: #814e2b; 
+    --primary-focus: #734424; 
+  }
+  
+  /* Fonts */
+  .font-poppins {
+    font-family: "Poppins", sans-serif !important;
+  }
+  
+  /* Background */
+  html, body {
+    background: absolute;
+    font-family: 'Poppins', sans-serif; 
+  }
+  
+  /* Selection color */
+  ::selection {
+    color: #fff;
+    background: #6665ee; 
+  }
+  
+  /* Container styles */
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .container .form {
+    background: #fff;
+    padding: 30px 35px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid var(--primary); 
+  }
+  
+  /* Form control styles */
+  .container .form form .form-control {
+    height: 40px;
+    font-size: 15px;
+  }
+  
+  /* Forget password link */
+  .container .form form .forget-pass {
+    margin: -15px 0 15px 0;
+  }
+  
+  .container .form form .forget-pass a {
+    font-size: 15px;
+  }
+  
+  /* Button styles */
+  .container .form form .button {
+    background: var(--primary); 
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none; 
+  }
+  
+  .container .form form .button:hover {
+    background: var(--primary-focus); 
+  }
+  
+  /* Link styles */
+  .container .form form .link {
+    padding: 5px 0;
+  }
+  
+  .container .form form .link a {
+    color: var(--primary); 
+  }
+  
+  /* Alert styles */
+  .container .row .alert {
+    font-size: 14px;
+  }
+  
+  /* Adjustments for error messages */
+  .container .form form .alert {
+    margin-top: 10px; 
+    border-radius: 5px; 
+  }
+  
