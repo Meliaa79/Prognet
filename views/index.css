@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .custom-brown {
+      background-color: #814e2b; 
+    }
+  }
+
+:root {
+  --primary: #814e2b;
+  --primary-focus: #734424;
+}
+
+.custom-brown {
+    background-color: #814e2b; /* Ganti dengan warna coklat yang Anda inginkan */
+}
+
+/* fonts */
+.font-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.font-archivo {
+  font-family: "Archivo", sans-serif !important;
+}
+
+/* component */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-focus);
+}
+
+/* navbar */
+.active {
+  color: var(--primary);
+}
+
+.nav-link:hover {
+  color: var(--primary) ;
+}
+
+html, body {
+  height: 100%; /* Pastikan body dan html mengisi seluruh tinggi layar */
+  margin: 0; /* Hapus margin */
+}
+
+/* login */
+.wrapper {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+/* Positioning icons inside input fields */
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #593b1f;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* overlay untuk login dan registrasi */
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; 
+  justify-content: center; 
+  align-items: center; 
+  z-index: 999; 
+}
+
+/* Ketika ditargetkan, tampilkan flex dan pusatkan */
+#loginFormWrapper:target,
+#registerFormWrapper:target {
+  display: flex; 
+}
+
+/* Kontainer Form */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%; 
+}
+
+/* Menjaga form tetap di tengah */
+.form-box {
+  display: flex; 
+  flex-direction: column; 
+}
+
+/* Flexbox for Remember Me and Forgot Password */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login-options label {
+  color: #333;
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Forgot password link styling */
+.forgot-password {
+  color: #593b1f;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #814e2b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #593b1f;
+}
+
+.login-options {
+  margin-bottom: 20px;
+}
+
+.register-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Register link and close button */
+.register-link, .login-link,
+.close-link {
+  margin-top: 10px;
+}
+
+.register-link a, .login-link a,
+.close-link a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #593b1f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-link a:hover, .login-link a:hover,
+.close-link a:hover {
+  text-decoration: underline;
+}
+
+.is-invalid {
+  border-color: #dc3545; /* Warna border merah untuk kesalahan */
+}
+
+.invalid-feedback {
+  display: none; /* Sembunyikan pesan kesalahan secara default */
+}
+
+input.is-invalid + .invalid-feedback {
+  display: block; /* Tampilkan pesan kesalahan jika ada kesalahan */
+}
+
+
+/* Footer styles */
+footer {
+  background-color: #5c4d37; /* Background color */
+  color: white; /* Text color */
+  text-align: center; /* Center text */
+  padding: 5px; /* Padding */
+  position: absolute; /* Positioning */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+}
+
+footer a {
+  color: white; /* Footer link color */
+  text-decoration: underline; /* Underline links */
+}
