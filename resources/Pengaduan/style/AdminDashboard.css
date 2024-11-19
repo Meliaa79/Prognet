@@ -1,0 +1,94 @@
+:root {
+  --primary: #548ca8;
+  --primary-focus: #334257;
+}
+
+/*--fonts--*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.font-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.font-archivo {
+  font-family: "Archivo", sans-serif !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+}
+
+body {
+  display: flex;
+  background-color: #fff8f0;
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 116px;
+  height: 100vh;
+  padding: 0 1.7rem;
+  color: #fff8f0;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: var(--primary-focus) !important;
+}
+.sidebar:hover {
+  width: 240px;
+  transition: 0.5s;
+}
+
+.main--content {
+  margin-left: 50px;
+  padding: 30px;
+  width: 100%;
+}
+
+.logo {
+  height: 80px;
+  align-content: center;
+  padding: 10px;
+}
+.menu {
+  height: 88%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+.menu li {
+  padding: 1rem;
+  margin: 20px 0;
+  border-radius: 15px;
+  transition: all 0.5s ease-in-out;
+}
+.menu li:hover,
+.active {
+  background: var(--primary) !important;
+}
+.menu a {
+  color: #fff8f0 !important;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.menu a span {
+  overflow: hidden;
+}
+.menu a i {
+  font-size: 1.2rem;
+}
+.logout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
